@@ -164,27 +164,27 @@ public class GuiControl : MonoBehaviour {
 			
 			if(!buttonPressed)
 			{
-				if (Input.GetKeyDown(KeyCode.DownArrow))
+			    if (Input.GetKeyDown(KeyCode.DownArrow))
 				{
-					currentSelection = (currentSelection+1)%buttonNames.Length;
+		        	currentSelection = (currentSelection+1)%buttonNames.Length;
 					buttonPressed = true;
 				}
 				if (Input.GetKeyDown(KeyCode.UpArrow))
 				{
 					currentSelection = (currentSelection-1+buttonNames.Length)%buttonNames.Length;
 					buttonPressed = true;
-				}
+		    	}
 			}
 			else if ((Input.GetKeyUp(KeyCode.UpArrow)) || (Input.GetKeyUp(KeyCode.DownArrow)))
-				buttonPressed = false;
+					buttonPressed = false;
 			
 			if (!buttonXPressed)
 			{
 				if (Input.GetAxisRaw("MenuX") < -0.1f)
 				{
-					currentSelection = (currentSelection+1)%buttonNames.Length;
+				 	currentSelection = (currentSelection+1)%buttonNames.Length;
 					buttonXPressed = true;
-				}
+		    	}
 				if (Input.GetAxisRaw("MenuX") > 0.1f) 
 				{
 					currentSelection = (currentSelection-1+buttonNames.Length)%buttonNames.Length;

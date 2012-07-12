@@ -1,5 +1,3 @@
-//Christoph Jansen
-
 using UnityEngine;
 using System.Collections;
 using System;
@@ -9,7 +7,6 @@ using System.Text;
 
 public class PhpConnect : MonoBehaviour {
 	
-	//Connect to webserver and send string to php script
 	public static void Send(string postData, bool isAuto)
 	{
 		string url;
@@ -27,7 +24,6 @@ public class PhpConnect : MonoBehaviour {
         dataStream.Close ();
 	}
 	
-	//Connect to webserver and send request to read string from php script
 	public static string Read()
 	{
         WebRequest request = WebRequest.Create ("http://protron.gnork.org/readdb.php");

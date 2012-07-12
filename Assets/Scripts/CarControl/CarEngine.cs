@@ -89,7 +89,7 @@ namespace AssemblyCSharp
 			get
 			{
 				// Don't return any turning moment if engine is idle or not started
-				if ((_clutchPressed) || (!_started))
+				if (_clutchPressed)
 					return 0;
 				
 				return (float)_actualTurningMoment * _gears[_currentGear] * _finalDriveRatio;

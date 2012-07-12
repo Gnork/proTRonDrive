@@ -1,5 +1,3 @@
-//Christoph Jansen
-
 using UnityEngine;
 using System.Collections;
 
@@ -11,6 +9,7 @@ public class Credits : MonoBehaviour {
 	private GUIStyle _myStyle;
 	private GUIStyle _labelStyle;
 
+	// Use this for initialization
 	void Start () {
 		if(e_myStyle != null)
 			_myStyle = e_myStyle;
